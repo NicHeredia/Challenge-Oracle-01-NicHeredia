@@ -8,16 +8,29 @@
 
 body{
     font-family: 'Roboto Serif', serif;
-    background: -webkit-linear-gradient(top left, #FCFCFC, #1EDEFB);
-    background: #FCFCFC;
-    background: linear-gradient(to bottom right, #FCFCFC, #1EDEFB);
-    background: -moz-linear-gradient(top left, #FCFCFC, #1EDEFB);
+    background-color: #E5E5E5;
     background-attachment: fixed;
 
 }
 
 #header{
     margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.datos-propios{
+    text-align: center;
+    background-color: #0A3871;
+    border-radius: 15px;
+    color: #E5E5E5;
+    padding: 10px;
+}
+
+.contacto{
+    color: #E5E5E5;
+    margin: 3px;
 }
 
 /* inicio seccion main */
@@ -58,7 +71,7 @@ body{
 
 
 button {
-    width: 250px;
+    width: 200px;
     outline: none;
     cursor: pointer;
     border: none;
@@ -155,7 +168,6 @@ button {
     display: none;
 }
 
-
    /* -----fin seccion header----- */
 
    @media (min-width: 500px) {
@@ -188,12 +200,14 @@ button {
        
        #muñeco{
             margin-top: 40px;
+            width: 60%;
             display: block;
             overflow: hidden;
        }
 
        #mensaje1, #mensaje2{
-           display: none;
+           display: block;
+           font-size: 16px;
        }
 
        #resultado{

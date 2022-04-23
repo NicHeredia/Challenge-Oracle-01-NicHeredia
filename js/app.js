@@ -1,12 +1,17 @@
+function esconderElementos(){
+  document.getElementById("esconder").style.display = "none";
+  document.getElementById("muñeco").style.display = "none";
+  document.getElementById("resultado").style.display = "block";
+  document.getElementById("boton-copiar").style.display = "block";
+}
+
+
+
 
 function encriptador() {
     x = ""
 
-    document.getElementById("esconder").style.display = "none";
-    document.getElementById("muñeco").style.display = "none";
-    document.getElementById("resultado").style.display = "block";
-    document.getElementById("boton-copiar").style.display = "block";
-
+    esconderElementos();
     document.getElementById("resultado").innerHTML = x
     var x = document.getElementById("encriptador").value;
 
@@ -22,11 +27,8 @@ function encriptador() {
 
   function desencriptador() {
     y = ""
-    document.getElementById("esconder").style.display = "none";
-    document.getElementById("muñeco").style.display = "none";
-    document.getElementById("resultado").style.display = "block";
-    document.getElementById("boton-copiar").style.display = "block";
-
+    
+    esconderElementos();
     document.getElementById("resultado").innerHTML = y
     var y = document.getElementById("encriptador").value;
     y = y.replace(/enter/g, "e");
