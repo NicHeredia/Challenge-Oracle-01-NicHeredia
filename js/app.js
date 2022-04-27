@@ -5,32 +5,29 @@ function esconderElementos(){
   document.getElementById("boton-copiar").style.display = "block";
 }
 
-
-
-
 function encriptador() {
     x = ""
-
-    esconderElementos();
-    document.getElementById("resultado").innerHTML = x
     var x = document.getElementById("encriptador").value;
 
-    
-    x = x.replace(/e/g, "enter");
-    x = x.replace(/i/g, "imes");
-    x = x.replace(/a/g, "ai");
-    x = x.replace(/o/g, "ober");
-    x = x.replace(/u/g, "ufat");
-    document.getElementById("resultado").innerHTML = x;
-    document.getElementById("encriptador").value = ""
+    if (x != "" && x.value) {
+      esconderElementos();
+      x = x.replace(/e/g, "enter");
+      x = x.replace(/i/g, "imes");
+      x = x.replace(/a/g, "ai");
+      x = x.replace(/o/g, "ober");
+      x = x.replace(/u/g, "ufat"); 
+      document.getElementById("resultado").innerHTML = x;
+      document.getElementById("encriptador").value = ""
+    } else {
+      console.log("array vacio");
+    }
   }
 
   function desencriptador() {
     y = ""
-    
-    esconderElementos();
-    document.getElementById("resultado").innerHTML = y
     var y = document.getElementById("encriptador").value;
+    if (y != ""){
+    esconderElementos();
     y = y.replace(/enter/g, "e");
     y = y.replace(/imes/g, "i");
     y = y.replace(/ai/g, "a");
@@ -38,7 +35,10 @@ function encriptador() {
     y = y.replace(/ufat/g, "u");
     document.getElementById("resultado").innerHTML = y;
     document.getElementById("encriptador").value = ""
-
+  
+    } else {
+      console.log("array vacio");
+    }
   }
 
 
