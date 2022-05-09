@@ -9,7 +9,7 @@ function encriptador() {
     x = ""
     var x = document.getElementById("encriptador").value;
 
-    if (x != "" && x.value) {
+    if (x != "") {
       esconderElementos();
       x = x.replace(/e/g, "enter");
       x = x.replace(/i/g, "imes");
@@ -47,3 +47,8 @@ function encriptador() {
 
     navigator.clipboard.writeText(content)       
 }
+
+function minus(e) {
+  e.value = e.value.toLowerCase();
+}
+
