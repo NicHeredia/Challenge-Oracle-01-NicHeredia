@@ -5,6 +5,11 @@ function esconderElementos(){
   document.getElementById("boton-copiar").style.display = "block";
 }
 
+//Funcion que realiza la codificacion siguiendo las llaves detalladas
+
+var botonEncriptar = document.querySelector("#button-encriptar");
+botonEncriptar.addEventListener("click",encriptador);
+
 function encriptador() {
     x = ""
     var x = document.getElementById("encriptador").value;
@@ -22,6 +27,11 @@ function encriptador() {
       console.log("array vacio");
     }
   }
+
+  //Funcion que realiza la decodificacion siguiendo el proceso a la inversa
+
+var botonDesencriptar = document.querySelector("#button-desencriptar");
+botonDesencriptar.addEventListener("click", desencriptador);
 
   function desencriptador() {
     y = ""
@@ -41,11 +51,15 @@ function encriptador() {
     }
   }
 
+  //funcion que realiza el trabajo de copiar el texto
+
+  var botonCopiar = document.querySelector("#boton-copiar");
+  botonCopiar.addEventListener("click", copyToClickBoard);
 
   function copyToClickBoard(){
     var content = document.getElementById('resultado').innerHTML;
-
-    navigator.clipboard.writeText(content)       
+    navigator.clipboard.writeText(content)    
+    alert("Texto copiado");   
 }
 
 function minus(e) {
