@@ -13,7 +13,6 @@ botonCopiar.addEventListener("click", copiarResultado);
 
 //validacion inputTextarea
 textarea.addEventListener("keyup", () =>{
-    textarea.value = textarea.value.toLowerCase();
-    textarea.value = textarea.value.replace(/[^a-zA-Z" "]+/g, "");
+    textarea.value = textarea.value.replace(/[^a-z" "]+/g, "");
 })
 
