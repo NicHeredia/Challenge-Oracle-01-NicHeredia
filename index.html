@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- iconos Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>Encriptador de Texto</title>
 </head>
 <body>
     <header id="header">
-        <img src="imagenes/Vector.png" alt="logo__Alura" id="header__logo">
+        <a href="index.html"><img src="imagenes/Vector.png" alt="logo__Alura" id="header__logo"></a>
         <div class="datos-propios">
             <p>Heredia Nicolas</p>
             <a href="https://github.com/NicHeredia" target="__blank"><i class="bi bi-github contacto"></i></a>
@@ -19,26 +22,32 @@
     </header>
     <main id="main">
         <div class="contenedor-principal">
-            <textarea required="true" name="" onkeyup="minus(this)" autocapitalize="none" id="encriptador" cols="30" rows="13" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea required="true" name="" autocapitalize="none" id="encriptador" cols="30" rows="13" placeholder="Ingrese el texto aqui"></textarea>
             <div id="contenedor-icon">
                 <i class="bi bi-exclamation-circle-fill" id="icon-advertencia"></i>
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="contenedor-botones">
-                <button id="button-encriptar"> <span>Encriptar</span> </button>
-                <button id="button-desencriptar"> <span>Desencriptar</span> </button>
+                <button id="btn-encriptar" class="btn"><span>Encriptar</span></button>
+                <button id="btn-desencriptar" class="btn"><span>Desencriptar</span></button>
             </div>
         </div>
         <div class="contenedor-resultado">
             <img src="imagenes/ilustracion.svg" id="muñeco" alt="">
             <p id="resultado"></p>
             <div id="esconder">
-                <p id="mensaje1">Ningún mensaje fue encontrado</p>
+                <p id="mensaje1">Mensaje no encontrado</p>
                 <p id="mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <button id="boton-copiar"><span>Copiar</span></button>
+            <button id="btn-copiar" class="btn"><span>Copiar</span></button>
         </div>
     </main>
+
+<!-- Script alertas -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- JS Propio -->
+<script src="js/encriptador-desencriptador.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

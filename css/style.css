@@ -69,8 +69,7 @@ body{
     align-items: center;
 }
 
-
-button {
+.btn {
     width: 200px;
     outline: none;
     cursor: pointer;
@@ -90,18 +89,18 @@ button {
     color: ghostwhite;
    }
    
-   button span {
+   .btn span {
     position: relative;
     z-index: 10;
     transition: color 0.4s;
    }
    
-   button:hover span {
+   .btn:hover span {
     color: black;
    }
    
-   button::before,
-   button::after {
+   .btn::before,
+   .btn::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -110,7 +109,7 @@ button {
     z-index: 0;
    }
    
-   button::before {
+   .btn::before {
     content: "";
     background: #0A3871;
     width: 120%;
@@ -119,7 +118,7 @@ button {
     transition: transform 0.6s cubic-bezier(0.3, 1, 0.8, 1);
    }
    
-   button:hover::before {
+   .btn:hover::before {
     transform: translate3d(100%, 0, 0);
    }
 
@@ -164,7 +163,7 @@ button {
        display: none;
    }
 
-   #boton-copiar{
+   #btn-copiar{
     display: none;
 }
 
